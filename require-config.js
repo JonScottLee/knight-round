@@ -1,6 +1,6 @@
 ({
   appDir: 'app/',
-  baseUrl: 'js',
+  baseUrl: 'js/',
   paths: {},
   dir: 'build/',
   modules: [
