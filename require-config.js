@@ -1,7 +1,9 @@
 ({
   appDir: 'app/',
   baseUrl: 'js/',
-  paths: {},
+  paths: {
+  	'jquery': 'lib/jquery'
+  },
   dir: 'build/',
   modules: [
   	{ name: 'main' }
