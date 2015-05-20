@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      files: ['Gruntfile.js', 'app/js/*.js', 'specs/**/*.js'],
+      files: ['Gruntfile.js', 'app/js/**/*.js', 'specs/**/*.js', '!*-min.js', '!*.min.js', '!app/js/lib/**/*.js'],
       options: {
         globals: {
           jQuery: true
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
     clean: ["build/js/"],
     watch: {
       files: ['<%= jshint.files %>'],
-      tasks: ['jshint', 'jasmine']
+      tasks: ['jshint']
     },
     jasmine: {
       src: 'app/js/*.js',
@@ -64,6 +64,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['exec', 'jshint', 'jasmine', 'watch']);
+  grunt.registerTask('default', ['exec', 'jshint', 'watch']);
   grunt.registerTask('minify', ['clean', 'exec', 'uglify']);
 };

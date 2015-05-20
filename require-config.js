@@ -2,7 +2,9 @@
   appDir: 'app/',
   baseUrl: 'js/',
   paths: {
-  	'jquery': 'lib/jquery'
+  	'jquery': 'lib/jquery',
+  	'underscore': 'lib/underscore',
+  	'backbone': 'lib/backbone'
   },
   dir: 'build/',
   modules: [

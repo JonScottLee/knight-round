@@ -1,10 +1,10 @@
 requirejs.config({  
     enforceDefine: true,
-    baseUrl: 'js/',
+    baseUrl: 'lib',
     paths: {
-        'jquery': 'lib/jquery',
-        'underscore': 'lib/underscore',
-        'backbone': 'lib/backbone'
+        'jquery': 'jquery',
+        'underscore': 'underscore',
+        'backbone': 'backbone'
     },
     shim: {
         "underscore": {
@@ -18,7 +18,7 @@ requirejs.config({
     }
 });
 
-define(['jquery', 'underscore', 'backbone'],
+require(['jquery', 'underscore', 'backbone'],
     function($, _, Backbone) {
         console.info($);
         console.info(_);
